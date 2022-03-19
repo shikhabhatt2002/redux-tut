@@ -1,25 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
+// import Home from './components/Home'; // no home container
+import HomeContainer from './containers/HomeContainer'; // yahan import home container ko kiya hai
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+//---------- Props passing Ex---------------------------------------------
+// import User from './User';
+
+// function App() {
+//   return (
+//     <div className="App">
+//      <User data={{ name:'anil sidhu', age:26} }></User>
+//     </div>
+//   );
+// }
+//------------------------------------------------------------------------
+
+
+
+//------------------------------------------------------------------------
+/*
+  direct yahan se pass nhi karenge
+  yahan se props,  container me bhejenge aur aage pass krenge
+  App-->HomeContainer
+*/
+//------------------------------------------------------------
+
+
+
+
+function App()
+{
+    return (
+      <div className="App">
+        <HomeContainer/>
+      </div>
+    )
 }
+
+
+
 
 export default App;
