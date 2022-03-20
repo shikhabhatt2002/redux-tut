@@ -4,6 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/*
+
+    Steps: IMPORTANT
+
+Complete Redux Flow
+
+    1) Make Reudux WRAPPER in in index file
+    2) What is Provider
+    3) Make Store
+    4) Check Data Flow in Console
+    5) Call Action on Button Click 
+
+*/
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -11,7 +26,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

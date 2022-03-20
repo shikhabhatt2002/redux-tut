@@ -23,6 +23,13 @@ import HomeContainer from './containers/HomeContainer'; // yahan import home con
   direct yahan se pass nhi karenge
   yahan se props,  container me bhejenge aur aage pass krenge
   App-->HomeContainer
+
+
+  IMPORTANT
+  Wrapper in index.js
+
+
+
 */
 //------------------------------------------------------------
 
