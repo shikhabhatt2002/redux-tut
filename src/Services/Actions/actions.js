@@ -24,6 +24,8 @@
 import {ADD_TO_CART, REMOVE_TO_CART} from '../Constants/constants';
 
 export const addToCart = (data)=> {
+    
+    console.log("action: ", data);
     return {
         // type:'ADD_TO_CART' ... earlier
         type: ADD_TO_CART,
@@ -34,10 +36,10 @@ export const addToCart = (data)=> {
 
 // // Action function 2
 // // type should be different for diffrent actions functions
-export const removeToCart = (data)=> {
+export const removeToCart = ()=> {
     return {
         type: REMOVE_TO_CART,
-        data: data
+        // no need of data
     }
 }
 

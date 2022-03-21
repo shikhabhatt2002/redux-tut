@@ -16,7 +16,7 @@
     ek Component banega, Uske andar kuch switch cases lagenge iss type ke basis pe, jo hum action se bhejte hain, add karna hai to kya rahega , remove krna hai to kya rahega
 */
 
-import { ADD_TO_CART } from "../Constants/constants"
+import { ADD_TO_CART, REMOVE_TO_CART } from "../Constants/constants"
 
 
 const initialState={
@@ -27,16 +27,32 @@ const initialState={
 // iske andar  2 parameters hote hain
 // ab action jo parameter hai vo, Action se Reducer me kaise pahunchega vo define hoti hai CONTAINER me
 // action apne aap CALL hote hai, humo EXTERALLY karne ki jarurat nhi
-export default function cardItems(state=initialState, action)
+
+// baar baar click krne pe ek he cart aara
+// jab ki hume baar baar click krne pe usme increment krna hai
+
+// export default function cardItems(state=initialState, action)
+export default function cardItems(state=[], action) // baar baar chaneg karne ki jarurat nhi hai
 {
     switch(action.type){
         // case 'ADD_TO_CART': // constas se use krenge reducer me bhi
-        case ADD_TO_CART: 
-            return { // this bracket only
-                ...state, // jo state ka anadr pehle DATA tha
-                cardData: action.data // ye actione ke andar 2 cheezin thi because type & data
-            }
+        case ADD_TO_CART:
+            console.log("Reducer: ", action);
+
+            // return { // this bracket only {} earlier
+            //     ...state, // jo state ka anadr pehle DATA tha
+            //     cardData: action.data // ye actione ke andar 2 cheezin thi because type & data
+            // }
+            return [ // this bracket only [] earlier
+                ...state, 
+                { cardData: action.data } // isko object bana denge
+            ]
             break; // impo har case ke baad
+        case REMOVE_TO_CART:
+            state.pop();
+            return[
+                ...state
+            ]
         default:
             return state // jab kuch na map kare// iska dur dur tak no relation with component state
 
